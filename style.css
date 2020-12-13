@@ -1139,7 +1139,7 @@ textarea {
     }
 
     .phone_number, .date_of_birth {
-        width: 100%;
+        width: 100%!important;
     }
 }
 @media only screen and (max-width: 360px) {

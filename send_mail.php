@@ -40,7 +40,7 @@
                     
 
                     // Instantiation and passing `true` enables exceptions
-                    $mail = new PHPMailer;
+                    $mail = new PHPMailer(true);
                     try {
                         //Server settings
                         $mail->isSMTP();
@@ -74,7 +74,7 @@
             }else if($purpose == 2) {
                     // Instantiation and passing `true` enables exceptions
                 if(!empty($_POST)) {
-                    $mail = new PHPMailer;
+                    $mail = new PHPMailer(true);
                     try {
 
                         //Server settings
@@ -145,7 +145,7 @@
 
             } else if($purpose == 3) {  //join class request
                 if (!empty($_POST['class-code'])) {
-                    $mail = new PHPMailer;
+                    $mail = new PHPMailer(true);
                     $mail->CharSet = 'UTF-8';
                     $mail->isSMTP();                                            // Send using SMTP
                     $mail->Host = 'smtp.gmail.com';                    // Set the SMTP server to send through
@@ -249,7 +249,7 @@
             } else if($purpose == 4){ //accepted join request
                 if(isset($_POST)) {
                     // Instantiation and passing `true` enables exceptions
-                    $mail = new PHPMailer;
+                    $mail = new PHPMailer(true);
                     try {
                         //Server settings
                         $mail->isSMTP();
@@ -288,7 +288,7 @@
             } else if($purpose == 5){ //accepted join request
              if(isset($_POST)) {
                  // Instantiation and passing `true` enables exceptions
-                 $mail = new PHPMailer;
+                 $mail = new PHPMailer(true);
                  try {
                      //Server settings
                      $mail->isSMTP();

@@ -39,7 +39,8 @@ function generateRandomString($length = 7) {
                 $teacherName = $row['teacher_name'];
             }
             //them class vao database cua sv
-            $sql = "INSERT INTO $username (class_code, course_name, teacher_name, role) VALUES('$classCode', '$className', '$teacherName', '".$_GET['student-role']."')";
+            $studentRole = $_GET['student-role'];
+            $sql = "INSERT INTO $username (class_code, course_name, teacher_name, role) VALUES('$classCode', '$className', '$teacherName', '$studentRole')";
             mysqli_query($conn, $sql) or die("FAILED TO ADD USER 1! $conn->error");
 
             //them sv vao database lop hoc

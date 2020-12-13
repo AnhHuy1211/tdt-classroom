@@ -941,11 +941,11 @@ textarea {
 }
 
 .register_area .buttons{
-    height: 40px;
+    min-height: 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 1rem;
 }
 
 .register_area .buttons .login_button{
@@ -1098,17 +1098,41 @@ textarea {
     }
 
     .register_area {
-        width: 100%;
+        min-width: 450px;
     }
 
     .register_area .buttons{
         flex-direction: column;
     }
 
+    .buttons .login_button {
+        align-self: start;
+    }
+
+    .buttons .next_button {
+        margin-left: auto;
+    }
+
     .register_area .buttons .next_button{
         position: relative;
     }
 
+    .signin-button {
+        flex-direction: column-reverse;
+    }
+
+    .signin-button .create-account {
+        align-self: start;
+    }
+
+    .signin-button .signin-button-item {
+        margin-left: auto;
+        margin-top: 1rem;
+    }
+
+    .signin-form {
+        min-width: 25rem;
+    }
 }
 @media only screen and (max-width: 360px) {
     .class-content, .people-list {

@@ -1131,7 +1131,7 @@ textarea {
     }
 
     .signin-form {
-        min-width: 23rem;
+        min-width: 20rem;
     }
 }
 @media only screen and (max-width: 360px) {

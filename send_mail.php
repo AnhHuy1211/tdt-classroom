@@ -5,6 +5,7 @@
     require 'PHPMailer/src/Exception.php';
     require 'PHPMailer/src/PHPMailer.php';
     require 'PHPMailer/src/SMTP.php';
+    require 'PHPMailer/vendor/autoload.php';
     include_once 'config.php';
 
      if(!empty($_POST['invite-request'])) {

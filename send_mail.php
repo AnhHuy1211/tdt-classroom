@@ -1,6 +1,11 @@
 <?php
-    require 'PHPMailer/source/PHPMailerAutoload.php';
-     include_once 'config.php';
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+
+    require 'PHPMailer/src/Exception.php';
+    require 'PHPMailer/src/PHPMailer.php';
+    require 'PHPMailer/src/SMTP.php';
+    include_once 'config.php';
 
      if(!empty($_POST['invite-request'])) {
          send_mail($_POST['invite-request'], '', '');

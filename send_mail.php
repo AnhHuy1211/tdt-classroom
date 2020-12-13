@@ -164,7 +164,7 @@
                         $class = "";
                         $courseName = "courses__".$_POST['class-code'];
                         $sql = "SELECT * FROM $courseName WHERE role = 'teacher'";
-                        $teacherInfo = mysqli_query($conn, $sql) or die($conn -> error);
+                        $teacherInfo = mysqli_query($conn, $sql);
                         if($teacherInfo -> num_rows > 0) {
                             session_start();
                             $_SESSION['student-email'] = $_POST['student-email'];
@@ -246,7 +246,6 @@
                         }
                         //Server settings
                                                             // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
-                        header("./sort-all-name.php");
                     } catch (Exception $e) {
                         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
                     }

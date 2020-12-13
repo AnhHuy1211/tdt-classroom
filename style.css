@@ -1135,7 +1135,11 @@ textarea {
     }
 
     .date_phone {
-        flex-direction: column;
+        flex-direction: column!important;
+    }
+
+    .phone_number, .date_of_birth {
+        width: 100%;
     }
 }
 @media only screen and (max-width: 360px) {

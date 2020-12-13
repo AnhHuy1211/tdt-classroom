@@ -139,7 +139,7 @@ if(isset($_SESSION['username'])) {
                                 Already have an account?
                                 <a class="text-dark" href="sign-in.php" style="cursor: pointer"> Sign in</a>
                             </div>
-                            <div class="next_button mr-0 w-25">
+                            <div class="next_button">
                                 <button class="btn btn-primary w-100" id="sign-up-btn" type="submit" name="submit" onmouseenter="enableSubmitButton()" disabled>Sign up</button>
                             </div>
                         </div>

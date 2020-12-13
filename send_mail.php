@@ -43,8 +43,6 @@
                         exit("Error");
                     }
 
-                    
-
                     // Instantiation and passing `true` enables exceptions
                     $mail = new PHPMailer(true);
                     try {
@@ -59,7 +57,7 @@
                         $mail->Port = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
                         //Recipients
-                        $mail->setFrom('buingockhaitam01@gmail.com', 'TDTU Classroom Server');
+                        $mail->setFrom('server.classroom3366@gmail.com', 'TDTU Classroom Server');
                         $mail->addAddress("$email_to");     // Add a recipient
                         $mail->addReplyTo('no-reply@gmail.com', 'No Reply');
 
@@ -95,7 +93,7 @@
                         $mail->Port = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
                         //Recipients
-                        $mail->setFrom('admin_TDTU_Classroom@gmail.com', 'TDTU Classroom Server');
+                        $mail->setFrom('server.classroom3366@gmail.com', 'TDTU Classroom Server');
                         $mail->addAddress("" . $_POST['invite-email'] . "");     // Add a recipient
                         $mail->addReplyTo('no-reply@gmail.com', 'No Reply');
 
@@ -268,7 +266,7 @@
                         $mail->Port = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
                         //Recipients
-                        $mail->setFrom('admin_TDTU_Classroom@gmail.com', 'TDTU Classroom Server');
+                        $mail->setFrom('server.classroom3366@gmail.com', 'TDTU Classroom Server');
                         $mail->addAddress("$specific");     // Add a recipient
                         $mail->addReplyTo('no-reply@gmail.com', 'No Reply');
 

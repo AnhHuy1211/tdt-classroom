@@ -28,7 +28,7 @@
                 if($password != $confirm){
                     die();
                 }else{
-                    $sql = "SELECT * FROM user_list WHERE username= '$username'";
+                    $sql = "SELECT * FROM users_list WHERE username= '$username'";
                     $num = mysqli_query($conn, $sql);
                     $password = md5($password);
 

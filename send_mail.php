@@ -164,7 +164,7 @@
                         $class = "";
                         $courseName = "courses__".$_POST['class-code'];
                         $sql = "SELECT * FROM $courseName WHERE role = 'teacher'";
-                        $teacherInfo = mysqli_query($conn, $sql);
+                        $teacherInfo = mysqli_query($conn, $sql) or die($conn -> error);
                         if($teacherInfo -> num_rows > 0) {
                             session_start();
                             $_SESSION['student-email'] = $_POST['student-email'];

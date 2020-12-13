@@ -1138,6 +1138,10 @@ textarea {
         flex-direction: column!important;
     }
 
+    .phone_number {
+        margin-top: 20px;
+    }
+
     .phone_number, .date_of_birth {
         width: 100%!important;
     }

@@ -1098,7 +1098,8 @@ textarea {
     }
 
     .register_area {
-        min-width: 450px;
+        min-width: 350px;
+        font-size: 1.25rem;
     }
 
     .register_area .buttons{

@@ -33,7 +33,7 @@
                     $password = md5($password);
 
                     $sql = "INSERT INTO users_list (firstname,lastname,date_of_birth,phone,email,username,password,career) VALUES('$firstname','$lastname','$date_of_birth','$phone_number','$email','$username','$password','$career')";
-                    mysqli_query($conn, $sql);
+                    mysqli_query($conn, $sql) or die($conn -> error);
             
                     /* Create database table for each user*/
                     //  mysqli_select_db("database",$conn);

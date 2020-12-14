@@ -8,6 +8,7 @@
     require 'PHPMailer/src/Exception.php';
     require 'PHPMailer/src/PHPMailer.php';
     require 'PHPMailer/src/SMTP.php';
+    require 'PHPMailer/vendor/autoload.php';
     include_once './config.php';
     $conn = openDB();
     if(isset($_POST['email'])){
@@ -28,13 +29,13 @@
             $mail->isSMTP();                                            // Send using SMTP
             $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-            $mail->Username = 'nguyen.a.huy03217@gmail.com';                     // SMTP username
-            $mail->Password = 'Huy0913899182';                               // SMTP password
+            $mail->Username = 'server.classroom3366@gmail.com';                     // SMTP username
+            $mail->Password = 'Huy12345678';                               // SMTP password
             $mail->SMTPSecure = 'tls';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
             $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
             //Recipients
-            $mail->setFrom('buingockhaitam01@gmail.com', 'TDTU Classroom Server');
+            $mail->setFrom('server.classroom3366@gmail.com', 'TDTU Classroom Server');
             $mail->addAddress("$email_to");     // Add a recipient
             $mail->addReplyTo('no-reply@gmail.com', 'No Reply');
 

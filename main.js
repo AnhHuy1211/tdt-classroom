@@ -264,7 +264,6 @@ function checkPasswordConfirm() {
         errorMessage.hide();
         enableSubmitButton();
     }
-    console.log(0);
 }
 
 function enableSubmitButton() {
@@ -389,3 +388,72 @@ function disableSearchBox(position) {
 
 }
 
+//////////////////////////////// RESET PASSWORD FORM ///////////////////////////////////////
+function enableSendButton() {
+    let errorMessage = $('.reset-error');
+    let submitButton = $('.send-btn');
+    let resetEmail = $('#reset-email');
+    if(resetEmail.val()) {
+        if(validateEmail(resetEmail.val())) {
+            $.get("./email-validate.php", {term: resetEmail.val()}).done(function (data) {
+                if (data) {
+                    errorMessage.hide();
+                    submitButton.attr("disabled", false);
+                } else {
+                    errorMessage.show();
+                    submitButton.attr("disabled", true);
+                }
+            });
+        }
+    }
+
+}
+
+function checkResetPasswordValidate() {
+    let password = $('#password');
+    let errorMessage = $('.password-error');
+    let submitButton = $('.reset-btn');
+    submitButton.attr("disabled", true);
+    if(password.val().length === 0) {
+        errorColorChange(password, true);
+        errorMessage.html('Password is required');
+        errorMessage.show(400);
+        submitButton.attr("disabled", true);
+    }
+    else if(password.val().length > 0 && password.val().length < 8) {
+        errorMessage.hide();
+        errorMessage.empty();
+        errorColorChange(password, true);
+        submitButton.attr("disabled", true);
+    } else {
+        errorMessage.hide();
+        errorMessage.empty();
+        errorColorChange(password, false);
+    }
+    checkResetPasswordConfirm();
+}
+
+function checkResetPasswordConfirm() {
+    let password = $('#password');
+    let passwordConfirm = $('#confirm');
+    let errorMessage = $('.confirm-error');
+    let submitButton = $('.reset-btn');
+
+    errorColorChange(passwordConfirm, false);
+    submitButton.attr("disabled", true);
+
+    if(passwordConfirm.val().length === 0) {
+        submitButton.attr("disabled", true);
+    }
+
+    else if(password.val() !== passwordConfirm.val() && passwordConfirm.val().length !== 0) {
+        errorColorChange(passwordConfirm, true);
+        errorMessage.html("Passwords did not match");
+        errorMessage.show(400);
+        submitButton.attr("disabled", true);
+    } else {
+        errorMessage.empty();
+        errorMessage.hide();
+        submitButton.attr("disabled", false);
+    }
+}

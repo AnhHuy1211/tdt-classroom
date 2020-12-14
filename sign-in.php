@@ -71,7 +71,7 @@ if(isset($_SESSION['username'])) {
                     </div>
                     <div class="">
                         <div class="checkbox">
-                            <div class="form-check">
+                            <div class="form-check pl-1">
                                 <input class="my-auto" type="checkbox" id="gridCheck1">
                                 <label class="form-check-label ml-3 my-auto" for="gridCheck1">
                                     Remember me

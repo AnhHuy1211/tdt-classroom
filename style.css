@@ -961,11 +961,11 @@ textarea {
 .forget_form{
     border: 1px ;
     border-radius: 2.5px;
-    box-shadow: 4px 8px 15px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
     padding: 10px;
-    width: 700px;
+    max-width: 650px;
     margin: 120px auto;
-    height: 200px;
+    min-height: 300px;
 }
 
 .forget_form #header{
@@ -975,38 +975,45 @@ textarea {
 
 .forget_form .forget_input{
     font-size: 15px;
-    width: 100%;
+    width: 100%!important;
+    height: 100%!important;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .forget_form .input_area{
-    padding-left: 120px;
-    padding-top: 10px;
+    margin: auto;
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5rem;
+}
+
+.forget_form .input_area input {
+    height: 50px;
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid #f0f0f0;
+    margin-bottom: 0.5rem;
+    box-shadow: none;
 }
 
 .forget_form .forget_input #instruction p{
     margin-bottom: 10px;
 }
 
-.forget_form .forget_input input{
-    width: 280px;
-    height: 3px;
-    padding: 10px 5px;
-
-}
-
-.forget_form .buttons_area{
-    margin-top: 40px;
-    padding-right: 20px;
-    padding-left: 0;
-    height: 30px;
-}
-
-.forget_form .buttons_area .buttons{
-    float: right;
+.forget_form .buttons_area {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .forget_form .buttons_area button{
-    padding: 1px 8px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-height: 2.5rem;
 }
 
 .forget_form #header_reset{
@@ -1099,6 +1106,7 @@ textarea {
 
     .register_area {
         max-width: 350px;
+        padding: 30px!important;
     }
 
     .register_area .buttons{
@@ -1139,10 +1147,11 @@ textarea {
     }
 
     .phone_number {
-        margin-top: 20px;
+        width: 100%!important;
+        margin-bottom: 20px!important;
     }
 
-    .phone_number, .date_of_birth {
+    .date_of_birth, #date_of_birth {
         width: 100%!important;
     }
 }

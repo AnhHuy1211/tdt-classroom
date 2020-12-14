@@ -20,6 +20,10 @@
          send_mail(3, '', '');
      }
 
+    if(!empty($_POST['reset-email'])) {
+        send_mail(1, '', '');
+    }
+
      function send_mail($purpose, $specific, $object){
         /*
             $purpose = 1 => Reset mail
@@ -34,14 +38,10 @@
                 //$time = date('Y-m-d h:i:s', time() + (60 * 60));
 
                 //$_SESSION['expired_time'] = $time;
-                if(isset($_POST['email'])) {
-                    $email_to = $_POST['email'];
+                if(isset($_POST['reset-email'])) {
+                    $email_to = $_POST['reset-email'];
                     $code = uniqid(true);
                     $query = mysqli_query($conn, "INSERT INTO reset_password(code, email) VALUES('$code' , '$email_to') ");
-
-                    if (!$query) {
-                        exit("Error");
-                    }
 
                     // Instantiation and passing `true` enables exceptions
                     $mail = new PHPMailer(true);
@@ -50,11 +50,11 @@
                         $mail->isSMTP();
                         $mail->CharSet = 'UTF-8';// Send using SMTP
                         $mail->Host = 'smtp.gmail.com';                    // Set the SMTP server to send through
-                        $mail->SMTPAuth = true;                                   // Enable SMTP authentication
+                        $mail->SMTPAuth = true;                                  // Enable SMTP authentication
                         $mail->Username = 'server.classroom3366@gmail.com';                     // SMTP username
                         $mail->Password = 'Huy12345678';                               // SMTP password
                         $mail->SMTPSecure = 'tls';
-                        $mail->SMTPDebug = 0;// Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+                        $mail->SMTPDebug = 0;
                         $mail->Port = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
                         //Recipients
@@ -291,7 +291,7 @@
                         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
                     }
                 }
-            } else if($purpose == 5){ //accepted join request
+            } else if($purpose == 5){ //denied join request
              if(isset($_POST)) {
                  // Instantiation and passing `true` enables exceptions
                  $mail = new PHPMailer(true);

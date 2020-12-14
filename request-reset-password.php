@@ -50,7 +50,7 @@
             if($mail->send()) {
                 ?>
             <script type="text/javascript">
-                window.location("https://mail.google.com/");
+                window.location.href = "https://mail.google.com/";
             </script>
 
             <?php

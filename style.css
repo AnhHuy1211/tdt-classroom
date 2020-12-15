@@ -1063,6 +1063,9 @@ textarea {
     }
 }
 @media only screen and (max-width: 600px) {
+    .nav-header {
+        min-height: 2.2378rem;
+    }
     aside {
         display: none;
     }

@@ -1157,12 +1157,12 @@ textarea {
 }
 @media only screen and (max-width: 360px) {
     .class-content, .people-list {
-        max-width: 47.5rem;
-        overflow-x: hidden;
+        max-width: 47.5rem!important;
+        overflow-x: hidden!important;
     }
 
     .edit-description {
-        display: none;
+        display: none!important;
     }
 
     .class-header, .class-body {

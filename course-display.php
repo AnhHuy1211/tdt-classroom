@@ -40,7 +40,7 @@ function displayClassList($position) { /*Ham hien thi danh sach lop hoc*/
                             <form method='post' action='./delete-class.php' style='display: none' id='".$row['class_code']."'>
                             <input name='delete-code' value='".$row['class_code']."'>
                             </form>                         
-                                <button type='button' class='cell-option-list-item btn delete-class' data-toggle='modal' data-target='#delete-class-confirm'>Delete class</button>
+                                <button type='button' class='cell-option-list-item btn delete-class' data-toggle='modal' data-target='"."#i".$row['class_code']."'>Delete class</button>
                         </div>
                     </div>
                     <form method='get' class='cell-header-item' action='content.php'>
@@ -66,7 +66,7 @@ function displayClassList($position) { /*Ham hien thi danh sach lop hoc*/
                 </div>
             </div>
         </li>";
-                echo "<div class='modal fade' id='delete-class-confirm' tabindex='-1' role='dialog' aria-labelledby='delete-class-confirm' aria-hidden='true'>
+                echo "<div class='modal fade' id='i".$row['class_code']."' tabindex='-1' role='dialog' aria-labelledby='delete-class-confirm' aria-hidden='true'>
     <div class='modal-dialog modal-dialog-centered' role='document'>
         <div class='modal-content'>
             <div class='modal-header'>

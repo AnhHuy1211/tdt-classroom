@@ -63,7 +63,7 @@
                         $mail->addReplyTo('no-reply@gmail.com', 'No Reply');
 
                         // Content
-                        $url = "http://" . $_SERVER["HTTP_HOST"] . dirname($_SERVER["PHP_SELF"]) . "/reset-password.php?code=$code";
+                        $url = "http://" . $_SERVER["HTTP_HOST"] . dirname($_SERVER["PHP_SELF"]) . "reset-password.php?code=$code";
                         $mail->isHTML(true);                                  // Set email format to HTML
                         $mail->Subject = 'Reset TDTU Classroom Password';
                         $mail->Body = "<h1>Need to reset your password ?</h1>

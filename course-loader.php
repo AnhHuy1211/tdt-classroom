@@ -27,7 +27,7 @@ function generateRandomString($length = 7) {
     date_default_timezone_set('Asia/Bangkok');
     $date = date('m-d-Y g:i:sA');
 
-    if(!empty($_GET['class-code']) && !empty($_GET['join-request'])) {
+    if(!empty($_GET['class-code']) && !empty($_GET['join-request']) && !empty($_GET['student-username'])) {
         $joinCode = $_GET['class-code'];
         $sql = "SELECT * FROM `course_list` WHERE class_code = '$joinCode'";
         $loadClass = mysqli_query($conn, $sql);
@@ -37,10 +37,11 @@ function generateRandomString($length = 7) {
                 $classCode = $row['class_code'];
                 $className = $row['course_name'];
                 $teacherName = $row['teacher_name'];
+                $joinUser = "users__".$_GET['student-username'];
             }
             //them class vao database cua sv
             $studentRole = $_GET['student-role'];
-            $sql = "INSERT INTO $username (class_code, course_name, teacher_name, role) VALUES('$classCode', '$className', '$teacherName', '$studentRole')";
+            $sql = "INSERT INTO $joinUser (class_code, course_name, teacher_name, role) VALUES('$classCode', '$className', '$teacherName', '$studentRole')";
             mysqli_query($conn, $sql) or die("FAILED TO ADD USER 1! $conn->error");
 
             //them sv vao database lop hoc

@@ -197,14 +197,14 @@ function loadClassName() // for content.php
                         <small>2 days ago</small>
                     </div>
                     <div class="class-body-cell-body mt-3 w-100" style=" font-size: .8275rem;">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <p>Content goes here</p>
                     </div>
                     <div class="class-body-cell-comment border-top pt-2 mt-4 w-100">
                         <h6 class="comment-title mb-3 text-muted">Comment</h6>
                         <div class="comment-cell">
                             <p class="mb-0 mt-2 font-weight-bold">Nguyen Anh Huy <small class="post-time">2 days ago</small></p>
 
-                            <p class='mt-2'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            <p class='mt-2'>Comment goes here </p>
                         </div>
                     </div>
                     <div class="class-body-cell-footer w-100 border-top pt-2 mt-4">

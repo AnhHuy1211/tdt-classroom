@@ -45,7 +45,6 @@ function generateRandomString($length = 7) {
             mysqli_query($conn, $sql) or die("FAILED TO ADD USER 1! $conn->error");
 
             //them sv vao database lop hoc
-            $className = "courses__".$joinCode;
             $sql = "INSERT INTO $className (firstname, lastname, email, username, role, date_join) VALUES('".$_GET['student-firstname'] . "', '". $_GET['student-lastname']."', '".$_GET['student-email']."', '".$_GET['student-username']."', '".$_GET['student-role']."', '$date')";
             mysqli_query($conn, $sql) or die("FAILED TO ADD USER 2! $conn->error");
             closeDB($conn);

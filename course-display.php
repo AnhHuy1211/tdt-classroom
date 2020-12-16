@@ -40,7 +40,7 @@ function displayClassList($position) { /*Ham hien thi danh sach lop hoc*/
                             <form method='post' action='./delete-class.php' style='display: none' id='".$row['class_code']."'>
                             <input name='delete-code' value='".$row['class_code']."'>
                             </form>                         
-                                <button type='button' class='cell-option-list-item btn delete-class' data-toggle='modal' data-target='#".$row['class_code']."i'>Delete class</button>
+                                <button type='button' class='cell-option-list-item btn delete-class' data-toggle='modal' data-target='#delete-class-confirm'>Delete class</button>
                         </div>
                     </div>
                     <form method='get' class='cell-header-item' action='content.php'>
@@ -66,7 +66,7 @@ function displayClassList($position) { /*Ham hien thi danh sach lop hoc*/
                 </div>
             </div>
         </li>";
-                echo "<div class='modal fade' id='".$row['class_code']."i' tabindex='-1' role='dialog' aria-labelledby='delete-class-confirm' aria-hidden='true'>
+                echo "<div class='modal fade' id='delete-class-confirm' tabindex='-1' role='dialog' aria-labelledby='delete-class-confirm' aria-hidden='true'>
     <div class='modal-dialog modal-dialog-centered' role='document'>
         <div class='modal-content'>
             <div class='modal-header'>
@@ -80,7 +80,7 @@ function displayClassList($position) { /*Ham hien thi danh sach lop hoc*/
             </div>
             <div class='modal-footer'>
                 <button type='button' class='btn btn-secondary' data-dismiss='modal'>Cancel</button>
-                <button type='submit' class='btn btn-primary' form='".$row['class_code']."'>Delete</button>
+                <button type='submit' class='btn btn-primary' form='".$row['class_code']."'>Proceed</button>
             </div>
         </div>
     </div>
